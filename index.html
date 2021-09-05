@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/pastel-glyph/2x/clock--v2.png" />
+
+    <link rel="stylesheet" href="./assets/boxicons/css/boxicons.min.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Pea Tasks for Day</title>
+</head>
+<body>
+
+  <div id="task-manager"></div>
+    <div class="task-manager scroll-edited">
+      <div class="left-bar hidden-on-M- unselect">
+          <div class="upper-part">
+            <div class="actions">
+              <div class="circle"></div>
+              <div class="circle-2"></div>
+            </div>
+          </div>
+
+          <div class="left-content scroll-edited">
+            <ul class="action-list left-box">
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-inbox" viewBox="0 0 24 24">
+                  <path d="M22 12h-6l-2 3h-4l-2-3H2"></path>
+                  <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                </svg>
+                <span>Inbox</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                <span> Today</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-calendar" viewBox="0 0 24 24">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                  <path d="M16 2v4M8 2v4m-5 4h18"></path>
+                </svg>
+                <span>Upcoming</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash">
+                  <line x1="4" y1="9" x2="20" y2="9"></line>
+                  <line x1="4" y1="15" x2="20" y2="15"></line>
+                  <line x1="10" y1="3" x2="8" y2="21"></line>
+                  <line x1="16" y1="3" x2="14" y2="21"></line></svg>
+                <span>Important</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Meetings</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-trash" viewBox="0 0 24 24">
+                  <path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+                <span>Trash</span>
+              </li>
+
+            </ul>
+
+            <ul class="category-list left-box">
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Family</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <span>Vacation</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline></svg>
+                <span>Festival</span>
+              </li>
+              <li class="item cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Concerts</span>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="main-content">
+        <h1 class="heading">Today Tasks</h1>
+
+        <ul class="task-filter">
+          <li class="filter">
+            <input type="radio" name="task-filter" id="filter-1">
+            <label for="filter-1">All</label>
+          </li>
+          <li class="filter">
+            <input type="radio" name="task-filter" id="filter-2" checked>
+            <label for="filter-2">Important</label>
+          </li>
+          <li class="filter">
+            <input type="radio" name="task-filter" id="filter-3">
+            <label for="filter-3">Notes</label>
+          </li>
+          <li class="filter">
+            <input type="radio" name="task-filter" id="filter-4">
+            <label for="filter-4">Link</label>
+          </li>
+        </ul>
+
+        <div class="tasks scroll-edited">
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-1" checked>
+            <label for="task-1">
+              Dashboard Design Implementation
+            </label>
+            <div class="tag approved"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-2" checked>
+            <label for="task-2">
+              Create a Web Application Design
+            </label>
+            <div class="tag process"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-3">
+            <label for="task-3">
+              Create a userflow
+            </label>
+            <div class="tag review"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-4">
+            <label for="task-4">
+              Application Implementation
+            </label>
+            <div class="tag process"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-5">
+            <label for="task-5">
+              Create a Dashboard Design
+            </label>
+            <div class="tag approved"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-6">
+            <label for="task-6">
+              Interactive Design
+            </label>
+            <div class="tag review"></div>
+          </div>
+
+          <div class="heading-tasks">Upcoming Tasks</div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-10">
+            <label for="task-10">
+              Application Implementation
+            </label>
+            <div class="tag waiting"></div>
+          </div>
+          
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-7">
+            <label for="task-7">
+              Create a userflow
+            </label>
+            <div class="tag waiting"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-8">
+            <label for="task-8">
+              Create a Web Application Design
+            </label>
+            <div class="tag waiting"></div>
+          </div>
+
+          <div class="task">
+            <input class="task-checkbox" type="checkbox" name="task" id="task-9">
+            <label for="task-9">
+              Dashboard Design Implementation
+            </label>
+            <div class="tag waiting"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-bar">
+        <div class="top-bar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+
+            <div class="count">7</div>
+        </div>
+
+        <div class="schedule">
+          <h2 class="heading">Schedule</h2>
+
+          <div class="tasks scroll-edited">
+            <div class="task yellow">
+              <div class="description">
+                <div class="time">08:00 - 09:00 AM</div>
+                <div class="name">Product Review</div>
+              </div>
+
+              <div class="more-btn">
+                <div></div>
+              </div>
+              
+              <div class="members unselect">
+                  <img class='member' src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="member">
+                  <img class='member' src="https://images.unsplash.com/photo-1476657680631-c07285ff2581?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2210&amp;q=80" alt="member-2">
+                  <img class='member' src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-3">
+                  <img class='member' src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-4">
+              </div>
+            </div>
+
+            <div class="task blue">
+              <div class="description">
+                <div class="time">10:00 - 11:00 AM</div>
+                <div class="name">Design Meeting</div>
+              </div>
+              <div class="more-btn">
+                <div></div>
+              </div>
+              <div class="members unselect">
+                <img class='member' src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2230&amp;q=80" alt="member">
+                <img class='member' src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-2">
+                <img class='member' src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-3">
+              </div>
+            </div>
+            <div class="task red">
+              <div class="description">
+                <div class="time">01:00 - 02:00 PM</div>
+                <div class="name">Team Meeting</div>
+              </div>
+              <div class="more-btn">
+                <div></div>
+              </div>
+              <div class="members unselect">
+                <img class='member' src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="member">
+                <img class='member' src="https://images.unsplash.com/photo-1475552113915-6fcb52652ba2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1934&amp;q=80" alt="member-2">
+                <img class='member' src="https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="member-3">
+                <img class='member' src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2230&amp;q=80" alt="member-4">
+              </div>
+            </div>
+            <div class="task green">
+              <div class="description">
+                <div class="time">03:00 - 04:00 PM</div>
+                <div class="name">Release Event</div>
+              </div>
+              <div class="more-btn">
+                <div></div>
+              </div>
+              <div class="members unselect">
+                <img class='member' src="https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=943&amp;q=80" alt="member">
+                <img class='member' src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=881&amp;q=80" alt="member-2">
+                <img class='member' src="https://images.unsplash.com/photo-1521122872341-065792fb2fa0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2208&amp;q=80" alt="member-3">
+                <img class='member' src="https://images.unsplash.com/photo-1486302913014-862923f5fd48?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3400&amp;q=80" alt="member-4">
+                <img class='member' src="https://images.unsplash.com/photo-1484187216010-59798e9cc726?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=955&amp;q=80" alt="member-5">
+              </div>
+            </div>
+            <div class="task blue">
+              <div class="description">
+                <div class="time">08:00 - 09:00 PM</div>
+                <div class="name">Release Event</div>
+              </div>
+              <div class="more-btn">
+                <div></div>
+              </div>
+              <div class="members unselect">
+                <img class='member' src="https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=943&amp;q=80" alt="member">
+                <img class='member' src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=881&amp;q=80" alt="member-2">
+                <img class='member' src="https://images.unsplash.com/photo-1521122872341-065792fb2fa0?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2208&amp;q=80" alt="member-3">
+                <img class='member' src="https://images.unsplash.com/photo-1486302913014-862923f5fd48?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3400&amp;q=80" alt="member-4">
+                <img class='member' src="https://images.unsplash.com/photo-1484187216010-59798e9cc726?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=955&amp;q=80" alt="member-5">
+              </div>
+            </div>
+            <div class="task yellow">
+              <div class="description">
+                <div class="time">11:00 - 12:00 PM</div>
+                <div class="name">Practise</div>
+              </div>
+              <div class="more-btn">
+                <div></div>
+              </div>
+              <div class="members unselect">
+                <img class='member' src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="member">
+                <img class='member' src="https://images.unsplash.com/photo-1476657680631-c07285ff2581?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2210&amp;q=80" alt="member-2">
+                <img class='member' src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-3">
+                <img class='member' src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="member-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/script/script.js"></script>
+</body>
+</html>
